@@ -1,0 +1,44 @@
+@import '../workspace/project/api/components/group/tree/api-group-tree.component';
+
+:host ::ng-deep {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  .ant-btn-link {
+    padding: 0;
+  }
+
+  .left {
+    width: 250px;
+    height: 70vh; // * necessary
+    border-right: 1px solid var(--BORDER);
+
+    .plugin-link {
+      &:hover,
+      &.active {
+        color: var(--MAIN_THEME_COLOR);
+        cursor: pointer;
+      }
+
+      &:hover {
+        background: rgb(0 0 0 / 10%);
+      }
+    }
+  }
+
+  .right {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+::ng-deep {
+  .eo-extension-modal {
+    width: 80%;
+
+    .ant-modal-body {
+      padding: 0;
+    }
+  }
+}

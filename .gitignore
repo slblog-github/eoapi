@@ -1,0 +1,64 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+dist/
+out/
+/tmp
+/out-tsc
+/app-builds
+/release
+*.js
+*.js.map
+*.webpack.js
+!patches/*
+!src/workbench/node/electron/**/*.js
+!src/workbench/node/request/**/*.js
+!src/workbench/node/server/**/*.js
+!/api/*.js
+!/scripts/*.js
+!*.config.js
+!.*.js
+!upload.js
+
+# dependencies
+node_modules
+# package-lock.json
+
+# IDEs and editors
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# misc
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+*-error.log
+testem.log
+/typings
+
+# e2e
+/e2e/test
+/e2e/imgs
+!/e2e/protractor.conf.js
+/e2e/*.map
+/e2e/tracing
+/e2e/screenshots
+
+# System Files
+.DS_Store
+Thumbs.db
+# *-lock.json
+-error.log
+.vercel
+nginx-test.conf
+docker-compose.dev.yml
+Dockerfile.dev
+
+#cache
+buildFile

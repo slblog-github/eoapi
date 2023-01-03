@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-body {
+  height: var(--body-height);
+}
+
+.home-container {
+  height: 100%;
+}
+
+.home {
+  background-color: var(--MAIN_BG);
+  color: var(--MAIN_TEXT);
+  overflow: hidden;
+}
+
+:host ::ng-deep {
+  .home-container {
+    --body-height: calc(100vh - var(--NAVBAR_HEIGHT) - var(--FOOTER_HEIGHT) - var(--remote-notification-height, 0));
+
+    router-outlet + * {
+      display: block;
+      height: var(--body-height);
+
+      // overflow: hidden auto;
+    }
+  }
+}
